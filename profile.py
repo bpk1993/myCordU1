@@ -28,13 +28,13 @@ node.disk_image = 'urn:publicid:IDN+utah.cloudlab.us+image+xos-PG0:OnePC-Ubuntu1
 
 # Install and execute scripts on the node
 node.addService(pg.Install(url="https://github.com/zdw/geni-groupadd/archive/master.tar.gz", path="/local"))
-node.addService(pg.Execute(shell="bash", command="/local/geni-groupadd-master/add_docker_libvirtd_groups.sh"))
+node.addService(pg.Execute(shell="sh", command="/local/geni-groupadd-master/add_docker_libvirtd_groups.sh"))
 
 apool = IG.AddressPool("nm",2)
 request.addResource(apool)
 
 # Install and execute a script that is contained in the repository.
-# node.addService(pg.Execute(shell="bash", command="/local/repository/silly.sh"))
+node.addService(pg.Execute(shell="bash", command="/local/repository/silly.sh"))
 
 # Print the generated rspec
 pc.printRequestRSpec(request)
