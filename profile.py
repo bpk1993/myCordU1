@@ -36,7 +36,7 @@ request.addResource(apool)
 node.addService(pg.Execute(shell="sh", command="chmod 777 /local/repository/silly.sh"))
 # Install and execute a script that is contained in the repository.
 node.addService(pg.Execute(shell="sh", command="/local/repository/silly.sh"))
-node.addService(pg.Execute(shell="sh", command="/silly.sh"))
+node.addService(pg.Execute(shell="sh", command="/proj/phantomnet-PG0/groups/bpk1993/my.sh"))
 
 # Print the generated rspec
 pc.printRequestRSpec(request)
