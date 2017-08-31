@@ -33,8 +33,10 @@ node.addService(pg.Execute(shell="sh", command="/local/geni-groupadd-master/add_
 apool = IG.AddressPool("nm",2)
 request.addResource(apool)
 
+node.addService(pg.Execute(shell="sh", command="chmod 777 /local/repository/silly.sh"))
 # Install and execute a script that is contained in the repository.
 node.addService(pg.Execute(shell="sh", command="/local/repository/silly.sh"))
+node.addService(pg.Execute(shell="sh", command="/silly.sh"))
 
 # Print the generated rspec
 pc.printRequestRSpec(request)
