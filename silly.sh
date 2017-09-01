@@ -6,4 +6,4 @@ sudo apt-get udpate
 
 sudo apt-get -y install screen
 
-echo "Done Stuff" > $HOME/p.txt
+echo "Done Some Stuff" > $HOME/p.txt
